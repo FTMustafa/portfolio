@@ -1,13 +1,13 @@
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  width: 100%;
-  height: auto;
-  color: white;
-  padding: 20px;
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+    height: auto;
+    color: white;
+    overflow-x: hidden;
 }
 
 .fade-in {
@@ -17,58 +17,32 @@
   top: 50px;
 }
 
-@keyframes fade {
+@keyframes fade{
   to {
     opacity: 1;
     top: 0;
   }
 }
 
-.about main {
-  box-shadow: 0px 0px 5px 2px green;
-  border-radius: 16px;
-  width: 800px;
-  max-width: 90%;
-  padding: 20px 30px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.4); /* Arka planla daha uyumlu */
-  margin: 20px 0;
+.about main{
+    box-shadow: 0px 0px 5px 2px green;
+    border-radius: 16px;
+    height: auto;
+    width: 800px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
 }
 
-section h2,
-article h2 {
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+section h2{
+    letter-spacing: 2px;
 }
-
-article {
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 1.5px;
-  font-weight: 300;
-  margin-bottom: 25px;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ✅ RESPONSIVE TASARIM */
-
-/* Tablet boyutları */
-@media (max-width: 768px) {
-  .about main {
-    width: 90%;
-    padding: 15px 20px;
-  }
-
-  section h2,
-  article h2 {
-    font-size: 1.2rem;
-  }
-
-  article {
-    font-size: 0.95rem;
-  }
+article{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 
 /* Mobil boyutları */
