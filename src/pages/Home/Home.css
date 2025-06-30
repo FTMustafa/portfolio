@@ -1,41 +1,45 @@
-.home{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    min-height: calc(90vh - 1px);
-    width: 100%;
-    color: white;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(90vh - 1px);
+  width: 100%;
+  color: white;
 }
 
-#title{
-    /* position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translate(-50%, 0); */
-    text-align: center;
-    text-shadow: 2px 2px 0px green;
-    letter-spacing: 1px;
-}
-.home>h3{
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-    margin-top: 30px;
-    letter-spacing: 2px;
-    font-weight: 400;
+  padding: 0 20px;
+  max-width: 600px;
+  width: 100%;
 }
 
-.home>img{
-    width: 200px;
-    height: 250px;
-    box-shadow: 0px 0px 6px 5px green;
-    border-radius: 8px;
-    filter: brightness(90%);
-    z-index: 800;
+#title {
+  text-shadow: 2px 2px 0px green;
+  letter-spacing: 1px;
 }
 
+.home-content h3 {
+  margin-top: 30px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  width: 100%;
+}
 
+.home-content img {
+  width: 200px;
+  height: 250px;
+  box-shadow: 0px 0px 6px 5px green;
+  border-radius: 8px;
+  filter: brightness(90%);
+  z-index: 800;
+}
+
+/* Fade effect */
 .fade-in {
   animation: fade 0.5s ease-out forwards;
   opacity: 0;
@@ -43,40 +47,41 @@
   top: 50px;
 }
 
-@keyframes fade{
+@keyframes fade {
   to {
     opacity: 1;
     top: 0;
   }
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   #title {
     font-size: 2rem;
   }
 
-  .home > h3 {
+  .home-content h3 {
     font-size: 1.1rem;
   }
 
-  .home > img {
+  .home-content img {
     width: 160px;
     height: 200px;
   }
 }
 
-/* Mobil ekranlar */
+/* Mobile */
 @media (max-width: 480px) {
   #title {
     font-size: 1.5rem;
   }
 
-  .home > h3 {
+  .home-content h3 {
     font-size: 1rem;
     margin-top: 20px;
   }
 
-  .home > img {
+  .home-content img {
     width: 130px;
     height: 170px;
   }
