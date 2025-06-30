@@ -1,6 +1,6 @@
 import "./Home.css";
 import ScrambleText from "../../components/ScrambleText";
-import vesikalik from "C:\\Users\\DELL\\Desktop\\Kodlar\\React\\portfolio\\src\\components\\Images\\Mustafa-vesikalık.png"
+import vesikalik from "../../components/Images/Mustafa-vesikalık.png"
 import { useEffect } from "react";
 
 function Home() {
