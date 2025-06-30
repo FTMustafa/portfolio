@@ -6,6 +6,7 @@
   min-height: calc(90vh - 1px);
   width: 100%;
   color: white;
+  overflow-x: hidden;
 }
 
 .home-content {
