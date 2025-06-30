@@ -1,0 +1,11 @@
+.skills{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: calc(90vh - 1px);
+    width: 100%;
+    color: white;
+}

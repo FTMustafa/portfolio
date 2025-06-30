@@ -1,8 +1,23 @@
-import ScrambleText from "../../components/ScrambleText";
 import "./Home.css";
+import ScrambleText from "../../components/ScrambleText";
 import vesikalik from "C:\\Users\\DELL\\Desktop\\Kodlar\\React\\portfolio\\src\\components\\Images\\Mustafa-vesikalık.png"
+import { useEffect } from "react";
 
 function Home() {
+
+  useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    
+    const timer = setTimeout(() => {
+      document.body.style.overflowY = "auto";
+    }, 500);
+
+    return () => {
+      document.body.style.overflowY = "auto";
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="home fade-in">
       <h1 id="title">

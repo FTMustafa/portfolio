@@ -2,8 +2,8 @@ import './CV.css';
 
 function CV(){
     return(
-        <div className='cv'>
-
+        <div className='cv fade-in'>
+            CV Page
         </div>
     );
 }

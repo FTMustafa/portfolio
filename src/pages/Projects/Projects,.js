@@ -2,8 +2,8 @@ import './Projects.css';
 
 function Projects(){
     return(
-        <div className='projects'>
-
+        <div className='projects fade-in'>
+            Projects Page
         </div>
     );
 }

@@ -2,8 +2,8 @@ import './Contact.css';
 
 function Contact(){
     return(
-        <div className='contact'>
-
+        <div className='contact fade-in'>
+            Contact Page
         </div>
     );
 }
