@@ -9,7 +9,14 @@ import {
   FaGitAlt,
   FaNpm,
 } from "react-icons/fa";
-import { SiTailwindcss, SiExpress, SiMysql } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiExpress,
+  SiMysql,
+  SiFlutter,
+  SiDart,
+} from "react-icons/si";
+
 import ScrambleText from "../../components/ScrambleText";
 
 function Skills() {
@@ -29,7 +36,9 @@ function Skills() {
     { icon: <FaCss3Alt />, name: "CSS" },
     { icon: <FaJs />, name: "JavaScript" },
     { icon: <FaReact />, name: "React" },
-    { icon: <SiTailwindcss />, name: "Tailwind" },
+    { icon: <SiDart />, name: "Dart" },
+    { icon: <SiFlutter />, name: "Flutter" },
+    // { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <SiExpress />, name: "Express.js" },
     { icon: <SiMysql />, name: "MySQL" },
@@ -51,7 +60,10 @@ function Skills() {
                 className="hex-shape"
               />
               <foreignObject x="20" y="5" width="60" height="100">
-                <div className="hex-content" xmlns="http://www.w3.org/1999/xhtml">
+                <div
+                  className="hex-content"
+                  xmlns="http://www.w3.org/1999/xhtml"
+                >
                   <div className="icon">{skill.icon}</div>
                   <p>{skill.name}</p>
                 </div>
