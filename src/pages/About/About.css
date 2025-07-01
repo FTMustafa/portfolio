@@ -30,7 +30,7 @@
   box-shadow: 0px 0px 5px 2px green;
   border-radius: 16px;
   width: 800px;
-  max-width: 100%; /* ✅ Ekran küçükse taşmayı engeller */
+  max-width: 100%; 
   margin: 20px 0;
   padding: 20px 30px;
   backdrop-filter: blur(5px);
@@ -49,8 +49,17 @@ article {
   flex-direction: column;
   letter-spacing: 1.5px;
   font-weight: 300;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   line-height: 1.6;
+}
+
+.divider {
+  width: 100%;
+  height: 20px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><path fill="none" stroke="%23008000" stroke-linecap="square" stroke-width="3.3" d="M15 50-35 0M35 50-15 0M55 50 5 0M75 50 25 0M95 50 45 0M115 50 65 0M135 50 85 0M155 50 105 0M175 50 125 0M195 50 145 0M215 50 165 0M235 50 185 0"></path></svg>')
+    center;
+  background-size: contain;
+  margin-bottom: 10px;
 }
 
 /* ✅ SADECE MOBİLDE KÜÇÜLME */

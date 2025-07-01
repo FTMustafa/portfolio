@@ -14,7 +14,12 @@ function CV() {
       clearTimeout(timer);
     };
   }, []);
-  return <div className="cv fade-in">CV Page</div>;
+  return (
+    <div className="cv fade-in">
+      CV Page
+      <div className="line">aaaa</div>
+    </div>
+  );
 }
 
 export default CV;

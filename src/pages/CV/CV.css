@@ -17,7 +17,7 @@
   top: 50px;
 }
 
-@keyframes fade{
+@keyframes fade {
   to {
     opacity: 1;
     top: 0;

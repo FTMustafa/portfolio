@@ -29,6 +29,7 @@ function About() {
             applications from scratch.
           </p>
         </article>
+        <div className="divider"/>
         <article>
           <h2>🎓 Education</h2>
           <p>
@@ -37,6 +38,7 @@ function About() {
             strengthened my software development skills.
           </p>
         </article>
+        <div className="divider"/>
         {/* <article>
           <h2>🔍 What I Like to Do</h2>
           <p>
@@ -52,6 +54,7 @@ function About() {
             open source projects and continue growing as a developer.
           </p>
         </article>
+        <div className="divider"/>
         <article>
           <h2>🎯 Outside of Coding</h2>
           <p>
