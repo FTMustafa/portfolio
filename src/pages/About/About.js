@@ -1,6 +1,20 @@
 import "./About.css";
+import { useEffect } from "react";
 
 function About() {
+  useEffect(() => {
+    document.body.style.overflowY = "hidden";
+
+    const timer = setTimeout(() => {
+      document.body.style.overflowY = "auto";
+    }, 500);
+
+    return () => {
+      document.body.style.overflowY = "auto";
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="about fade-in">
       <main>

@@ -8,9 +8,9 @@ function Navbar() {
 
   const navItems = {
     Home: "",
-    Projects: "projects",
-    Skills: "skills",
     About: "about",
+    Skills: "skills",
+    Projects: "projects",
     Contact: "contact",
     "CV / Resume": "cv",
   };

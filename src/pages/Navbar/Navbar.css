@@ -55,7 +55,6 @@ nav li.active {
   width: 100%;
 }
 
-/* 🎯 RESPONSIVE TASARIM BURADA BAŞLIYOR */
 
 /* Tablet boyutu ve altı için */
 @media (max-width: 768px) {
@@ -85,21 +84,26 @@ nav li.active {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 6px;
     height: auto;
-    padding: 15px 10px;
+    padding: 8px 0;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   nav li {
     width: 30%;
-    max-width: 120px;
-    min-width: 100px;
-    font-size: 15px;
-    padding: 10px 5px;
+    max-width: 100px;
+    min-width: 80px;
+    font-size: 13px;
+    padding: 6px 4px;
+    box-sizing: border-box;
   }
 
   nav li:hover {
-    box-shadow: 280px 0px green inset;
+    box-shadow: 250px 0px green inset;
     color: white;
     transition: box-shadow 0.5s ease, color 0.4s ease;
   }
