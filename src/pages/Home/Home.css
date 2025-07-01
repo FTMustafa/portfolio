@@ -45,6 +45,7 @@ body, html {
   border-radius: 8px;
   filter: brightness(90%);
   z-index: 800;
+  user-select: none;
 }
 
 /* Fade effect */

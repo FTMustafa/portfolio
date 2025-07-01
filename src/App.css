@@ -12,4 +12,5 @@ html, body {
   background-size: contain;
   background-position: top;
   color: white;
+  cursor: url('./components/Images/default-cursor.png'), auto;
 }

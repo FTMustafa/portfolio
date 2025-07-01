@@ -27,7 +27,6 @@ nav {
 
 nav li {
   text-align: center;
-  cursor: pointer;
   padding: 10px 5px;
   width: 120px;
   background-color: #111;
@@ -41,6 +40,7 @@ nav li {
 nav li:hover {
   box-shadow: 131px 0px green inset;
   color: white;
+  cursor: url('../../components/Images/pointer.png'), auto;
   transition: box-shadow 0.5s ease, color 0.4s ease;
 }
 
