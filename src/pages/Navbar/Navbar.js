@@ -1,10 +1,10 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
-  const [active, setActive] = useState("Home");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = {
     Home: "",
@@ -15,8 +15,21 @@ function Navbar() {
     "CV / Resume": "cv",
   };
 
+  const getActiveItem = () => {
+    const currentPath = location.pathname.replace("/", "");
+    const foundItem = Object.keys(navItems).find(
+      (key) => navItems[key] === currentPath
+    );
+    return foundItem || "Home";
+  };
+
+  const [active, setActive] = useState(getActiveItem());
+
+  useEffect(() => {
+    setActive(getActiveItem());
+  }, [location.pathname]);
+
   const handleChangePage = (item, url) => {
-    setActive(item);
     navigate(`/${url}`);
   };
 
@@ -33,7 +46,7 @@ function Navbar() {
           </li>
         ))}
       </nav>
-      <div className="var-pages">
+      <div className="var-page">
         <Outlet />
       </div>
     </div>
