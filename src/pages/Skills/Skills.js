@@ -46,11 +46,47 @@ function Skills() {
     { icon: <FaNpm />, name: "NPM" },
   ];
 
+  const softSkills = [
+    "Problem Solving",
+    "Teamwork",
+    "Time Management",
+    "Communication",
+    "Creativity",
+    "Adaptability",
+  ];
+
+  const tools = [
+    "VS Code",
+    "Figma",
+    "Postman",
+    "Chrome DevTools",
+    "GitHub",
+    "Terminal",
+  ];
+
   return (
     <div className="skills fade-in">
       <h2 className="skills-title">
         <ScrambleText text={"🛠 My Skills"} duration={1000} />
       </h2>
+      <section className="skills-wrapper">
+        <article>
+          <h3>Soft Skills</h3>
+          <ul>
+            {softSkills.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article>
+          <h3>Tools</h3>
+          <ul>
+            {tools.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </section>
       <div className="honeycomb">
         {skills.map((skill, i) => (
           <div className="hex-svg-wrapper" key={i}>
@@ -72,6 +108,7 @@ function Skills() {
           </div>
         ))}
       </div>
+      
     </div>
   );
 }

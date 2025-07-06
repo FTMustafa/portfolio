@@ -17,7 +17,6 @@ function CV() {
   return (
     <div className="cv fade-in">
       CV Page
-      <div className="line">aaaa</div>
     </div>
   );
 }
