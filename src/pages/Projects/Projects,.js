@@ -14,7 +14,7 @@ function Projects() {
       clearTimeout(timer);
     };
   }, []);
-  return <div className="projects fade-in">Projects Page</div>;
+  return <div className="projects fade-in">Projects will be added soon</div>;
 }
 
 export default Projects;

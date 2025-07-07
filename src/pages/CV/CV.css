@@ -8,6 +8,8 @@
   min-height: calc(90vh - 1px);
   width: 100%;
   color: white;
+  padding: 60px 0px;
+  padding-top: 20px;
 }
 
 .fade-in {
@@ -22,4 +24,48 @@
     opacity: 1;
     top: 0;
   }
+}
+
+.cv-title {
+  font-size: 2rem;
+  text-shadow: 2px 2px green;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.cv p {
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.cv-download {
+  margin-top: 20px;
+  background-color: transparent;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: box-shadow 0.5s ease;
+  border: 3px solid green;
+  border-style: dotted;
+  cursor: url("../../components/Images/pointer.png"), auto;
+}
+
+.cv-download:hover {
+  box-shadow: 196px 0px green inset;
+}
+
+.cv-download:active {
+  transform: scale(0.98);
+}
+
+.cv-preview {
+  width: 90%;
+  max-width: 800px;
+  height: 600px;
+  border: none;
+  margin-top: 40px;
+  box-shadow: 0px 0px 6px 2px green;
+  border-radius: 12px;
 }

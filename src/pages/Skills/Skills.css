@@ -145,5 +145,7 @@
   .skills-wrapper li {
     font-size: 0.85rem;
     text-align: left;
+    list-style-position: outside;
+    padding-left: 1em; 
   }
 }

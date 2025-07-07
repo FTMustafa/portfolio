@@ -8,6 +8,8 @@
   min-height: calc(90vh - 1px);
   width: 100%;
   color: white;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .fade-in {
@@ -17,9 +19,130 @@
   top: 50px;
 }
 
-@keyframes fade{
+@keyframes fade {
   to {
     opacity: 1;
     top: 0;
+  }
+}
+
+.contact-title {
+  font-size: 2rem;
+  text-shadow: 2px 2px green;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.contact-subtitle {
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 600px;
+  letter-spacing: 2px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid green;
+  background-color: #111;
+  color: white;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: transparent;
+  color: green;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid green;
+  transition: all 0.6s ease;
+  cursor: url("../../components/Images/pointer.png"), auto;
+}
+
+.contact-form button:hover {
+  box-shadow: 347px 0px green inset;
+  color: white;
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-socials a {
+  color: green;
+  transition: 0.3s;
+  cursor: url("../../components/Images/pointer.png"), auto;
+}
+
+.contact-socials a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.email-copy-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: green;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s;
+  cursor: url("../../components/Images/pointer.png"), auto;
+}
+
+.copy-btn:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.copied-msg {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: green;
+  font-size: 1rem;
+  background-color: #111;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid green;
+  width: 80px;
+  text-align: center;
+}
+
+@media (max-width:600px) {
+  .contact-wrapper{
+    gap: 20px;
   }
 }
