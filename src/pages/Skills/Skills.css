@@ -63,6 +63,7 @@
   color: white;
   text-align: center;
   height: 95%;
+  user-select: none;
 }
 
 .hex-content .icon {
