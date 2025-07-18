@@ -26,28 +26,45 @@ nav {
 }
 
 nav li {
+  position: relative;
   text-align: center;
   padding: 10px 5px;
   width: 120px;
-  background-color: #111;
-  color: green;
+  /* background-color: #111;
   border: 1px solid green;
-  border-radius: 8px;
+  border-radius: 8px; */
+  color: green;
   letter-spacing: 1px;
   user-select: none;
+  cursor: url('../../components/Images/pointer.png'), auto;
 }
 
-nav li:hover {
+nav li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+nav li:hover::before, nav li.active::before{
+  width: 100%;
+}
+
+/* nav li:hover {
   box-shadow: 131px 0px green inset;
   color: white;
   cursor: url('../../components/Images/pointer.png'), auto;
   transition: box-shadow 0.5s ease, color 0.4s ease;
-}
+} */
 
-nav li.active {
+/* nav li.active {
   background-color: green;
   color: white;
-}
+} */
 
 .var-page {
   display: flex;
