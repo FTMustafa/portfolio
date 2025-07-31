@@ -87,12 +87,12 @@ nav li:hover::before, nav li.active::before{
     font-size: 14px;
     padding: 8px 4px;
   }
-
+/* 
   nav li:hover {
     box-shadow: 117px 0px green inset;
     color: white;
     transition: box-shadow 0.5s ease, color 0.4s ease;
-  }
+  } */
 }
 
 /* Mobil boyut için */
@@ -118,10 +118,10 @@ nav li:hover::before, nav li.active::before{
     padding: 6px 4px;
     box-sizing: border-box;
   }
-
+/* 
   nav li:hover {
     box-shadow: 250px 0px green inset;
     color: white;
     transition: box-shadow 0.5s ease, color 0.4s ease;
-  }
+  } */
 }
