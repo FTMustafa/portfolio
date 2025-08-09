@@ -8,11 +8,13 @@ import {
   FaJs,
   FaGitAlt,
   FaNpm,
+  FaDocker
 } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiExpress,
   SiMysql,
+  SiElectron,
   SiFlutter,
   SiDart,
 } from "react-icons/si";
@@ -38,12 +40,14 @@ function Skills() {
     { icon: <FaReact />, name: "React" },
     { icon: <SiDart />, name: "Dart" },
     { icon: <SiFlutter />, name: "Flutter" },
-    // { icon: <SiTailwindcss />, name: "Tailwind" },
+    { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiExpress />, name: "Express.js" },
-    { icon: <SiMysql />, name: "MySQL" },
+    { icon: <SiElectron />, name: "Electron" },
+    { icon: <FaDocker />, name: "Docker" },
     { icon: <FaGitAlt />, name: "Git" },
-    { icon: <FaNpm />, name: "NPM" },
+    // { icon: <SiExpress />, name: "Express.js" },
+    // { icon: <SiMysql />, name: "MySQL" },
+    // { icon: <FaNpm />, name: "NPM" },
   ];
 
   const softSkills = [
@@ -57,7 +61,7 @@ function Skills() {
 
   const tools = [
     "VS Code",
-    "Figma",
+    "Docker",
     "Postman",
     "Chrome DevTools",
     "GitHub",
@@ -95,7 +99,7 @@ function Skills() {
                 points="50,0 93,25 93,75 50,100 7,75 7,25"
                 className="hex-shape"
               />
-              <foreignObject x="20" y="5" width="60" height="100">
+              <foreignObject x="20" y="6" width="60" height="100">
                 <div
                   className="hex-content"
                   xmlns="http://www.w3.org/1999/xhtml"
