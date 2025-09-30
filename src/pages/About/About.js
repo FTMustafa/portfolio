@@ -19,7 +19,7 @@ function About() {
     <div className="about fade-in">
       <main>
         <article>
-          <h2>🧍 Who Am I?</h2>
+          <h2>Who Am I?</h2>
           <p>
             I'm Mustafa, a junior frontend developer with a strong interest in
             building responsive and user-friendly web and mobile applications.
@@ -31,9 +31,9 @@ function About() {
         </article>
         <div className="divider"/>
         <article>
-          <h2>🎓 Education</h2>
+          <h2>Education</h2>
           <p>
-            I'm studying Computer Engineering at Trakya University. During my
+            I studied Computer Engineering at Trakya University. During my
             studies, I’ve completed various academic and personal projects that
             strengthened my software development skills.
           </p>
@@ -47,7 +47,7 @@ function About() {
           </p>
         </article> */}
         <article>
-          <h2>🚀 Career Goals</h2>
+          <h2>Career Goals</h2>
           <p>
             My goal is to become a full-stack developer and work on meaningful
             projects that make a real impact. I'm also planning to contribute to
@@ -56,7 +56,7 @@ function About() {
         </article>
         <div className="divider"/>
         <article>
-          <h2>🎯 Outside of Coding</h2>
+          <h2>Outside of Coding</h2>
           <p>
             In my free time, I enjoy:
             <ul>
