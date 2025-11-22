@@ -21,31 +21,23 @@ function About() {
         <article>
           <h2>Who Am I?</h2>
           <p>
-            I'm Mustafa, a junior frontend developer with a strong interest in
-            building responsive and user-friendly web and mobile applications.
-            I'm currently focusing on React and exploring backend technologies
-            like Node.js. I enjoy designing clean UIs, solving coding
-            challenges, learning new frameworks, and building full-stack
-            applications from scratch.
+            I'm Mustafa, a junior software developer with a strong interest in building responsive and user-friendly web and mobile applications.
+            I enjoy designing clean UIs, solving coding challenges, learning new frameworks, and building full-stack applications from scratch.
+            I'm currently focusing on machine learning using Python to improve my skills this area too.
           </p>
         </article>
-        <div className="divider"/>
+        <div className="divider" />
         <article>
           <h2>Education</h2>
           <p>
-            I studied Computer Engineering at Trakya University. During my
-            studies, I’ve completed various academic and personal projects that
-            strengthened my software development skills.
+            I earned my Bachelor's degree (3.06\4.00) in Computer Engineering
+            from Trakya University and am now pursuing a Master's degree in the
+            same field. Throughout my education, I have completed various
+            academic and personal projects that have strengthened my software
+            development skills.
           </p>
         </article>
-        <div className="divider"/>
-        {/* <article>
-          <h2>🔍 What I Like to Do</h2>
-          <p>
-            I enjoy designing clean UIs, solving coding challenges, learning new
-            frameworks, and building full-stack applications from scratch.
-          </p>
-        </article> */}
+        <div className="divider" />
         <article>
           <h2>Career Goals</h2>
           <p>
@@ -54,7 +46,7 @@ function About() {
             open source projects and continue growing as a developer.
           </p>
         </article>
-        <div className="divider"/>
+        <div className="divider" />
         <article>
           <h2>Outside of Coding</h2>
           <p>

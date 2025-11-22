@@ -22,12 +22,12 @@ function Home() {
       <main className="home-content">
         <h1 id="title">
           <ScrambleText text="Mustafa Mustafa" duration={1500} />
-          <ScrambleText text="Jr. Frontend Developer" duration={1800} />
+          <ScrambleText text="Jr. Software Developer" duration={1800} />
         </h1>
         <img src={vesikalik} />
         <h3>
-          Hello! I'm Mustafa, a passionate frontend and mobile developer skilled
-          in React, Node.js, and Flutter.
+          Hello! I'm Mustafa, a passionate software developer skilled
+          in React, Python, and Flutter.
         </h3>
       </main>
     </div>

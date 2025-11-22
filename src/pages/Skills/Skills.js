@@ -17,6 +17,7 @@ import {
   SiElectron,
   SiFlutter,
   SiDart,
+  SiPython
 } from "react-icons/si";
 
 import ScrambleText from "../../components/ScrambleText";
@@ -42,9 +43,10 @@ function Skills() {
     { icon: <SiFlutter />, name: "Flutter" },
     { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiElectron />, name: "Electron" },
     { icon: <FaDocker />, name: "Docker" },
     { icon: <FaGitAlt />, name: "Git" },
+    { icon: <SiPython />, name: "Python" },
+    // { icon: <SiElectron />, name: "Electron" },
     // { icon: <SiExpress />, name: "Express.js" },
     // { icon: <SiMysql />, name: "MySQL" },
     // { icon: <FaNpm />, name: "NPM" },

@@ -74,14 +74,27 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 180px;
+  gap: 20px;
   padding: 30px 65px;
   max-width: 800px;
+  /* border-radius: 16px;
+  margin: 0 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 5px 2px green; */
+  /* background-color: rgba(0, 0, 0, 0.4);   */
+}
+
+
+.skills-wrapper article {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 400px;
   border-radius: 16px;
   margin: 0 20px;
   margin-bottom: 10px;
   box-shadow: 0px 0px 5px 2px green;
-  /* background-color: rgba(0, 0, 0, 0.4);  */
+  padding: 10px 15px;
 }
 
 .skills-wrapper article h3{
