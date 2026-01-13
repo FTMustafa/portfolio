@@ -44,7 +44,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 60px;
+  gap: 10px;
   width: 100%;
   max-width: 800px;
 }
@@ -87,8 +87,8 @@
 
 .contact-socials {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column;
+  gap: 18px;
   font-size: 28px;
   align-items: center;
   justify-content: center;
@@ -144,5 +144,8 @@
 @media (max-width:600px) {
   .contact-wrapper{
     gap: 20px;
+  }
+  .contact-socials{
+    flex-direction: row;
   }
 }

@@ -23,19 +23,16 @@ function About() {
           <p>
             I'm Mustafa, a junior software developer with a strong interest in building responsive and user-friendly web and mobile applications.
             I enjoy designing clean UIs, solving coding challenges, learning new frameworks, and building full-stack applications from scratch.
-            I'm currently focusing on machine learning using Python to improve my skills this area too.
+            I'm currently focusing on machine learning using Python to improve my skills in this area too.
           </p>
         </article>
         <div className="divider" />
         <article>
           <h2>Education</h2>
-          <p>
-            I earned my Bachelor's degree (3.06\4.00) in Computer Engineering
-            from Trakya University and am now pursuing a Master's degree in the
-            same field. Throughout my education, I have completed various
-            academic and personal projects that have strengthened my software
-            development skills.
-          </p>
+          <ul>
+            <li>Bachelor's degree of Computer Engineering (3.06\4.00) - Trakya University (2021-2025)</li>
+            <li>Master's degree of Computer Engineering (In Progress) - Trakya University (2025-2027)</li>
+          </ul>
         </article>
         <div className="divider" />
         <article>

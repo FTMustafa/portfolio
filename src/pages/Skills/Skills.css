@@ -8,7 +8,7 @@
 }
 
 .skills-title {
-  margin: 40px 0;
+  margin-top: 40px;
   font-size: 2rem;
   text-shadow: 2px 2px green;
   letter-spacing: 2px;
@@ -22,8 +22,7 @@
   max-width: 800px;
   padding: 20px 0;
   border-radius: 16px;
-  margin: 0 20px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   /* box-shadow: 0px 0px 5px 2px green; */
   /* background-color: rgba(0, 0, 0, 0.4); */
 }
@@ -36,11 +35,12 @@
 .hex-svg {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0px 0px 8px green);
   transition: transform 0.3s ease;
+  filter: drop-shadow(0px 0px 8px green);
 }
 
 .hex-svg:hover {
+  filter: none;
   transform: scale(1.1);
   /* cursor: url('../../components/Images/pointer.png'), auto; */
 }
@@ -85,6 +85,7 @@
 }
 
 
+
 .skills-wrapper article {
   display: flex;
   justify-content: center;
@@ -92,15 +93,13 @@
   max-width: 400px;
   border-radius: 16px;
   margin: 0 20px;
-  margin-bottom: 10px;
-  box-shadow: 0px 0px 5px 2px green;
   padding: 10px 15px;
 }
 
 .skills-wrapper article h3{
   text-align: center;
   letter-spacing: 4px;
-  text-decoration: underline 2px green;
+  text-decoration: underline 1px limegreen;
   text-underline-offset: 6px;
 }
 
@@ -112,9 +111,9 @@
   list-style-type: disc;
 }
 
-.skills-wrapper article > ul li::marker {
+/* .skills-wrapper article > ul li::marker {
   color: green;
-}
+} */
 
 
 
@@ -147,7 +146,7 @@
   }
 
   .skills-wrapper article {
-    width: 45%;
+    width: 60%;
     max-width: 200px;
   }
 
