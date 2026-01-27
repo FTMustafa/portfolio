@@ -17,7 +17,8 @@ import {
   SiElectron,
   SiFlutter,
   SiDart,
-  SiPython
+  SiPython,
+  SiArduino
 } from "react-icons/si";
 
 import ScrambleText from "../../components/ScrambleText";
@@ -39,13 +40,14 @@ function Skills() {
     { icon: <FaCss3Alt />, name: "CSS" },
     { icon: <FaJs />, name: "JavaScript" },
     { icon: <FaReact />, name: "React" },
-    { icon: <SiDart />, name: "Dart" },
-    { icon: <SiFlutter />, name: "Flutter" },
     { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <FaDocker />, name: "Docker" },
+    { icon: <SiFlutter />, name: "Flutter" },
+    { icon: <SiDart />, name: "Dart" },
     { icon: <FaGitAlt />, name: "Git" },
     { icon: <SiPython />, name: "Python" },
+    { icon: <SiArduino />, name: "Arduino" },
+    // { icon: <FaDocker />, name: "Docker" },
     // { icon: <SiElectron />, name: "Electron" },
     // { icon: <SiExpress />, name: "Express.js" },
     // { icon: <SiMysql />, name: "MySQL" },
@@ -107,7 +109,7 @@ function Skills() {
                   xmlns="http://www.w3.org/1999/xhtml"
                 >
                   <div className="icon">{skill.icon}</div>
-                  <p>{skill.name}</p>
+                  <div className="name">{skill.name}</div>
                 </div>
               </foreignObject>
             </svg>

@@ -30,8 +30,8 @@ function About() {
         <article>
           <h2>Education</h2>
           <ul>
-            <li>Bachelor's degree of Computer Engineering (3.06\4.00) - Trakya University (2021-2025)</li>
-            <li>Master's degree of Computer Engineering (In Progress) - Trakya University (2025-2027)</li>
+            <li>Bachelor's degree of Computer Engineering (GPA 3.06\4) - Trakya University (2021-2025)</li>
+            <li>Master's degree of Computer Engineering (GPA 88,71\100) - Trakya University (2025-2027)</li>
           </ul>
         </article>
         <div className="divider" />

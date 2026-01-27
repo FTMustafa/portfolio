@@ -24,10 +24,18 @@ function Home() {
           <ScrambleText text="Mustafa Mustafa" duration={1500} />
           <ScrambleText text="Jr. Software Developer" duration={1800} />
         </h1>
-        <img src={vesikalik} />
+        <div className="profile-card">
+          <img src={vesikalik} alt="Mustafa" />
+          <div className="card-content">
+            <p><span>Name:</span> Mustafa</p>
+            <p><span>Surname:</span> Mustafa</p>
+            <p><span>Age:</span> 22</p>
+            <p><span>Location:</span> Turkey / Edirne</p>
+          </div>
+        </div>
         <h3>
-          Hello! I'm Mustafa, a passionate software developer skilled
-          in React, Python, and Flutter.
+          Hello! I'm Mustafa, a passionate software developer skilled in React,
+          Python, and Flutter.
         </h3>
       </main>
     </div>
