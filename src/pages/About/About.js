@@ -21,17 +21,26 @@ function About() {
         <article>
           <h2>Who Am I?</h2>
           <p>
-            I'm Mustafa, a junior software developer with a strong interest in building responsive and user-friendly web and mobile applications.
-            I enjoy designing clean UIs, solving coding challenges, learning new frameworks, and building full-stack applications from scratch.
-            I'm currently focusing on machine learning using Python to improve my skills in this area too.
+            I'm Mustafa, a junior software developer with a strong interest in
+            building responsive and user-friendly web and mobile applications. I
+            enjoy designing clean UIs, solving coding challenges, learning new
+            frameworks, and building full-stack applications from scratch. I'm
+            currently focusing on machine learning using Python to improve my
+            skills in this area too.
           </p>
         </article>
         <div className="divider" />
         <article>
           <h2>Education</h2>
           <ul>
-            <li>Bachelor's degree of Computer Engineering (GPA 3.06\4) - Trakya University (2021-2025)</li>
-            <li>Master's degree of Computer Engineering (GPA 88,71\100) - Trakya University (2025-2027)</li>
+            <li>
+              Bachelor's degree of Computer Engineering (GPA 3.06\4) - Trakya
+              University (2021-2025)
+            </li>
+            <li>
+              Master's degree of Computer Engineering (GPA 88,71\100) - Trakya
+              University (2025-2027)
+            </li>
           </ul>
         </article>
         <div className="divider" />
