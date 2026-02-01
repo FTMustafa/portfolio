@@ -1,10 +1,10 @@
-import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { HiMenuAlt3, HiX } from "react-icons/hi"; // npm install react-icons yapmadıysan yapmalısın
 import "./Navbar.css";
-import { useEffect, useState } from "react";
 
 function Navbar() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = {
     Home: "",
@@ -15,37 +15,61 @@ function Navbar() {
     "CV / Resume": "cv",
   };
 
-  const getActiveItem = () => {
-    const currentPath = location.pathname.replace("/", "");
-    const foundItem = Object.keys(navItems).find(
-      (key) => navItems[key] === currentPath
-    );
-    return foundItem || "Home";
+  // Mobilde menü aç/kapa
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    // Menü açılınca arka planın kaymasını engelle
+    document.body.style.overflow = !isOpen ? "hidden" : "auto";
   };
 
-  const [active, setActive] = useState(getActiveItem());
-
-  useEffect(() => {
-    setActive(getActiveItem());
-  }, [location.pathname]);
-
-  const handleChangePage = (item, url) => {
-    navigate(`/${url}`);
+  // Linke tıklayınca menüyü kapat
+  const closeMenu = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
-    <div className="navbar">
-      <nav>
+    <div className="navbar-container">
+      
+      {/* --- MASAÜSTÜ MENÜSÜ (Senin Orijinal Tasarımın) --- */}
+      <nav className="desktop-nav">
         {Object.keys(navItems).map((item) => (
-          <li
-            key={item}
-            onClick={() => handleChangePage(item, navItems[item])}
-            className={active === item ? "active" : ""}
-          >
-            {item}
+          <li key={item}>
+            <NavLink 
+              to={`/${navItems[item]}`}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              {item}
+            </NavLink>
           </li>
         ))}
       </nav>
+
+      {/* --- MOBİL ÜST BAR (Sadece mobilde görünür) --- */}
+      <div className="mobile-header">
+        <div className="mobile-logo">&lt;Mustafa/&gt;</div>
+        <div className="mobile-toggle" onClick={toggleMenu}>
+          {isOpen ? <HiX /> : <HiMenuAlt3 />}
+        </div>
+      </div>
+
+      {/* --- MOBİL TAM EKRAN MENÜ (Overlay) --- */}
+      <div className={`mobile-menu-overlay ${isOpen ? "open" : ""}`}>
+        <ul className="mobile-nav-list">
+          {Object.keys(navItems).map((item, index) => (
+            <li key={item} style={{ transitionDelay: `${index * 100}ms` }}>
+              <NavLink 
+                to={`/${navItems[item]}`} 
+                onClick={closeMenu}
+                className={({ isActive }) => (isActive ? "active-mobile" : "")}
+              >
+                {item}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div className="var-page">
         <Outlet />
       </div>

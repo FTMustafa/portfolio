@@ -1,10 +1,9 @@
+/* --- GENEL SAYFA --- */
 .contact {
   display: flex;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
   min-height: calc(90vh - 1px);
   width: 100%;
   color: white;
@@ -12,140 +11,234 @@
   box-sizing: border-box;
 }
 
-.fade-in {
-  animation: fade 0.5s ease-out forwards;
-  opacity: 0;
-  position: relative;
-  top: 50px;
-}
-
-@keyframes fade {
-  to {
-    opacity: 1;
-    top: 0;
-  }
-}
-
 .contact-title {
-  font-size: 2rem;
-  text-shadow: 2px 2px green;
+  font-size: 2.5rem;
+  text-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
   letter-spacing: 2px;
   text-align: center;
+  margin-bottom: 10px;
+  color: #4ade80;
 }
 
 .contact-subtitle {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
   max-width: 600px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
+/* --- ANA KART (GLASS CARD) --- */
 .contact-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: row; /* Yan yana */
+  justify-content: space-between;
+  align-items: stretch; /* Yükseklikleri eşitle */
+  gap: 40px;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  padding: 50px;
+  border-radius: 24px;
+  
+  /* Glassmorphism Efekti */
+  backdrop-filter: blur(10px);
+  background-color: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* --- FORM ALANI --- */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 350px;
+  gap: 20px;
+  flex: 1; /* Alanı kapla */
 }
 
+/* Input ve Textarea Modernizasyonu */
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px solid green;
-  background-color: #111;
+  padding: 15px;
+  border-radius: 12px;
+  /* Kenarlık yok, sadece hafif zemin */
+  background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
+/* Placeholder rengini açalım */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Focus (Tıklanma) Efekti */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4ade80; /* Neon Yeşil */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.1); /* Hafif Glow */
+}
+
+/* --- GÖNDER BUTONU --- */
 .contact-form button {
-  background-color: transparent;
-  color: green;
+  background-color: rgba(74, 222, 128, 0.1);
+  color: #4ade80;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px solid green;
-  transition: all 0.6s ease;
-  cursor: url("../../components/Images/pointer.png"), auto;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #4ade80;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: url('../../components/Images/pointer.png'), auto;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .contact-form button:hover {
-  box-shadow: 347px 0px green inset;
-  color: white;
+  background-color: #4ade80;
+  color: #111; /* Yazı siyah olsun okunsun */
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.4);
+  transform: translateY(-2px);
 }
 
+/* --- SOSYAL VE İLETİŞİM ALANI (SAĞ TARAF) --- */
 .contact-socials {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  font-size: 28px;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 25px;
+  padding-left: 40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1); /* Ayırıcı Çizgi */
 }
 
-.contact-socials a {
-  color: green;
-  transition: 0.3s;
-  cursor: url("../../components/Images/pointer.png"), auto;
+/* Sosyal Linkler */
+.contact-socials a, 
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02); /* Hafif kutu */
+  border: 1px solid transparent;
+  cursor: url('../../components/Images/pointer.png'), auto;
 }
 
-.contact-socials a:hover {
+/* İkon Boyutu */
+.contact-socials svg {
+  font-size: 1.5rem;
+  color: #4ade80;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Efekti */
+.contact-socials a:hover,
+.copy-btn:hover {
+  background: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.3);
   color: white;
-  transform: scale(1.2);
+  transform: translateX(5px); /* Sağa hafif kayma */
+}
+
+.contact-socials a:hover svg,
+.copy-btn:hover svg {
+  transform: scale(1.1);
+  /* filter: drop-shadow(0 0 5px #4ade80); */
 }
 
 .email-copy-wrapper {
   position: relative;
-  display: inline-block;
+  width: 100%;
 }
 
 .copy-btn {
+  width: 100%;
   background: none;
-  border: none;
-  color: green;
-  font-size: 28px;
-  cursor: pointer;
-  transition: all 0.3s;
-  cursor: url("../../components/Images/pointer.png"), auto;
-}
-
-.copy-btn:hover {
-  color: white;
-  transform: scale(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+  font-family: inherit;
 }
 
 .copied-msg {
   position: absolute;
-  top: -25px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
-  color: green;
-  font-size: 1rem;
-  background-color: #111;
-  padding: 3px 8px;
+  color: #4ade80;
+  font-size: 0.85rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px 12px;
   border-radius: 6px;
-  border: 1px solid green;
-  width: 80px;
-  text-align: center;
+  border: 1px solid #4ade80;
+  white-space: nowrap;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (max-width:600px) {
-  .contact-wrapper{
-    gap: 20px;
+@keyframes popIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Fade In */
+.fade-in {
+  animation: fade 0.6s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  top: 30px;
+}
+
+@keyframes fade {
+  to { opacity: 1; top: 0; }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column; /* Mobilde alt alta */
+    padding: 30px;
+    gap: 40px;
   }
-  .contact-socials{
-    flex-direction: row;
+
+  .contact-socials {
+    flex-direction: row; /* İkonlar yan yana */
+    flex-wrap: wrap;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    justify-content: center;
+  }
+
+  .contact-socials a, 
+  .copy-btn {
+    width: auto; /* Genişlik serbest */
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  /* Mobilde textleri gizleyip sadece ikon bırakabiliriz veya küçültebiliriz */
+  .contact-socials a span {
+    display: none; 
+  }
+  
+  .email-copy-wrapper {
+    width: auto;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
   }
 }

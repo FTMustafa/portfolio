@@ -1,13 +1,20 @@
-.navbar {
+/* --- ANA YAPI --- */
+.navbar-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  height: auto;
   width: 100%;
   background-color: transparent;
 }
 
-nav {
+.var-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.desktop-nav {
   display: flex;
   flex-direction: row;
   height: 10vh;
@@ -16,112 +23,187 @@ nav {
   justify-content: center;
   gap: 20px;
   list-style: none;
-  color: green;
   padding: 0;
   margin: 0;
+  
+  /* Orijinal efektlerin */
   backdrop-filter: blur(5px);
   filter: brightness(150%);
-  box-shadow: 0px 0px 10px green;
-  flex-wrap: wrap; /* küçük ekranlar için */
+  /* box-shadow: 0px 0px 10px green; */
+  border-bottom: 1px solid limegreen;
+  z-index: 100;
 }
 
-nav li {
+/* Li stillerini NavLink'e uyarladık */
+.desktop-nav li {
   position: relative;
   text-align: center;
-  padding: 10px 5px;
   width: 120px;
-  /* background-color: #111;
-  border: 1px solid green;
-  border-radius: 8px; */
-  color: green;
-  letter-spacing: 1px;
   user-select: none;
   cursor: url('../../components/Images/pointer.png'), auto;
 }
 
-nav li::before {
+/* NavLink (a etiketi) stilleri - Senin li stillerini buraya taşıdım */
+.desktop-nav a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 5px;
+  color: limegreen;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  width: 100%;
+  height: 100%;
+  cursor: url('../../components/Images/pointer.png'), auto;
+}
+
+/* Alt Çizgi Animasyonu */
+.desktop-nav li::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: green;
+  background-color: limegreen;
   transition: width 0.3s ease;
 }
 
-nav li:hover::before, nav li.active::before{
+/* Hover ve Active Durumu (Alt çizgi uzasın) */
+.desktop-nav li:hover::before {
   width: 100%;
 }
 
-/* nav li:hover {
-  box-shadow: 131px 0px green inset;
-  color: white;
-  cursor: url('../../components/Images/pointer.png'), auto;
-  transition: box-shadow 0.5s ease, color 0.4s ease;
-} */
-
-/* nav li.active {
-  background-color: green;
-  color: white;
-} */
-
-.var-page {
-  display: flex;
-  flex-direction: column;
+/* React Router Active Class'ı gelince de çizgi uzasın */
+.desktop-nav a.active {
+  font-weight: bold;
+}
+.desktop-nav li:has(a.active)::before {
   width: 100%;
 }
 
+/* Mobil Parçaları Başlangıçta Gizle */
+.mobile-header,
+.mobile-menu-overlay {
+  display: none;
+}
 
-/* Tablet boyutu ve altı için */
+
+/* =======================================================
+   MOBİL / TABLET GÖRÜNÜMÜ (Profesyonel Yapı)
+   ======================================================= */
 @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-    height: auto;
+  
+  /* 1. Eski Masaüstü Menüyü Gizle */
+  .desktop-nav {
+    display: none;
   }
 
-  nav li {
-    width: 100px;
-    font-size: 14px;
-    padding: 8px 4px;
-  }
-/* 
-  nav li:hover {
-    box-shadow: 117px 0px green inset;
-    color: white;
-    transition: box-shadow 0.5s ease, color 0.4s ease;
-  } */
-}
-
-/* Mobil boyut için */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* 2. Mobil Üst Bar (Header) */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
-    height: auto;
-    padding: 8px 0;
-    margin: 0 auto;
+    padding: 15px 25px;
     width: 100%;
+    height: 70px;
     box-sizing: border-box;
+    
+    /* Glassmorphism Header */
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
-  nav li {
-    width: 30%;
-    max-width: 100px;
-    min-width: 80px;
-    font-size: 13px;
-    padding: 6px 4px;
-    box-sizing: border-box;
+  .mobile-logo {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
-/* 
-  nav li:hover {
-    box-shadow: 250px 0px green inset;
-    color: white;
-    transition: box-shadow 0.5s ease, color 0.4s ease;
-  } */
+
+  /* Hamburger Butonu */
+  .mobile-toggle {
+    font-size: 2rem;
+    color: green;
+    cursor: url('../../components/Images/pointer.png'), auto;
+    z-index: 1002;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-toggle:active {
+    transform: scale(0.9);
+  }
+
+  /* 3. Tam Ekran Menü Overlay */
+  .mobile-menu-overlay {
+    display: flex; /* Flex ama başlangıçta görünmez */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.98); /* Tam siyah zemin */
+    backdrop-filter: blur(15px);
+    z-index: 1001;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Açılış Animasyonu */
+    opacity: 0;
+    pointer-events: none; /* Kapalıyken tıklanamaz */
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Menü Açıkken (.open class'ı) */
+  .mobile-menu-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  /* Menü Listesi */
+  .mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  /* Menü Elemanları */
+  .mobile-nav-list li {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* Elemanların Gelişi (Overlay açılınca) */
+  .mobile-menu-overlay.open .mobile-nav-list li {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Link Stilleri */
+  .mobile-nav-list a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-list a.active-mobile {
+    color: green;
+    font-weight: 600;
+    border-bottom: 2px solid green;
+  }
 }

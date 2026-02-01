@@ -1,3 +1,4 @@
+/* --- GENEL SAYFA YAPISI --- */
 .skills {
   display: flex;
   flex-direction: column;
@@ -5,166 +6,246 @@
   justify-content: center;
   color: white;
   min-height: calc(90vh - 1px);
+  padding-bottom: 40px;
 }
 
 .skills-title {
   margin-top: 40px;
-  font-size: 2rem;
-  text-shadow: 2px 2px green;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
   letter-spacing: 2px;
+  color: #4ade80;
+  text-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+  text-align: center;
+  text-shadow: 2px 2px 0px green;
 }
 
+/* --- HARD SKILLS (HONEYCOMB) KAPSAYICISI --- */
 .honeycomb {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  max-width: 800px;
-  padding: 20px 0;
-  border-radius: 16px;
-  /* margin-bottom: 50px; */
-  /* box-shadow: 0px 0px 5px 2px green; */
-  /* background-color: rgba(0, 0, 0, 0.4); */
+  gap: 25px;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+
+  /* Glassmorphism Efekti */
+  backdrop-filter: blur(10px);
+  /* background-color: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
 }
 
+/* --- ALTIGEN (HEX) TASARIMI --- */
 .hex-svg-wrapper {
-  width: 100px;
-  height: 115px;
+  width: 110px;
+  height: 125px;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
 }
 
 .hex-svg {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(0px 0px 8px green);
+  /* Gölgeyi SVG'ye değil wrapper'a veya hover'a sakladık */
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
 }
 
-.hex-svg:hover {
-  filter: none;
-  transform: scale(1.1);
-  /* cursor: url('../../components/Images/pointer.png'), auto; */
-}
-
+/* Altıgenin kendisi (Path) */
 .hex-shape {
-  fill: #111;
-  transition: fill 0.3s ease;
+  fill: rgba(30, 30, 30, 0.9); /* Hafif transparan koyu */
+  stroke: rgba(255, 255, 255, 0.1); /* Çok ince beyaz çerçeve */
+  stroke-width: 2px;
+  transition: all 0.3s ease;
 }
 
-.hex-svg:hover .hex-shape {
-  fill: green;
+/* --- HEX HOVER EFEKTİ (NEON LAMBA GİBİ) --- */
+.hex-svg-wrapper:hover {
+  transform: translateY(-10px) scale(1.05); /* Yukarı süzülme */
+  z-index: 10;
 }
 
+.hex-svg-wrapper:hover .hex-shape {
+  fill: rgba(20, 20, 20, 0.95); /* Zemin koyulaşır */
+  stroke: #4ade80; /* Çerçeve neon yeşil olur */
+  stroke-width: 3px;
+  /* SVG'nin kendisine glow veriyoruz */
+  filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.6));
+}
+
+/* Hex İçerik */
 .hex-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  color: white;
   text-align: center;
-  height: 95%;
-  user-select: none;
-}
-
-.hex-content .name{
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font-size: 14px;
+  height: 90%;
+  width: 100%;
+  position: absolute; /* SVG'nin üzerine tam oturması için */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Mouse olaylarını SVG'ye geçir */
+  color: #e0e0e0;
+  transition: color 0.3s ease;
 }
 
 .hex-content .icon {
-  font-size: 24px;
+  font-size: 28px;
+  /* margin-bottom: 5px; */
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
 }
 
+.hex-content .name {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hex-svg-wrapper:hover .hex-content {
+  color: #fff; /* Hoverda yazı tam beyaz */
+}
+.hex-svg-wrapper:hover .hex-content .icon {
+  color: #4ade80; /* İkon yeşillenir */
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- SOFT SKILLS KAPSAYICISI --- */
 .skills-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 30px 65px;
-  max-width: 800px;
-  /* border-radius: 16px;
-  margin: 0 20px;
-  margin-bottom: 10px;
-  box-shadow: 0px 0px 5px 2px green; */
-  /* background-color: rgba(0, 0, 0, 0.4);   */
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Glassmorphism - About Main ile uyumlu */
+  backdrop-filter: blur(10px);
+  background-color: rgba(20, 20, 20, 0.4);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-
-
+/* --- SOFT SKILLS KARTLARI (Article) --- */
 .skills-wrapper article {
+  flex: 1 1 300px; /* Responsive genişleme */
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 400px;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
   border-radius: 16px;
-  margin: 0 20px;
-  padding: 10px 15px;
+
+  /* About.css article ile aynı stil */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.skills-wrapper article h3{
+.skills-wrapper article:hover {
+  transform: translateY(-5px);
+  background-color: rgba(50, 205, 50, 0.05);
+  border-color: #4ade80;
+  box-shadow:
+    0 0 15px rgba(74, 222, 128, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skills-wrapper article h3 {
   text-align: center;
-  letter-spacing: 4px;
-  text-decoration: underline 1px limegreen;
-  text-underline-offset: 6px;
+  letter-spacing: 2px;
+  color: #4ade80;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.2);
+  margin-bottom: 15px;
+  text-decoration: none; /* Alt çizgiyi kaldırdım, border yeterli */
+  font-size: 1.3rem;
 }
 
 .skills-wrapper article > ul {
-  line-height: 30px;
-  letter-spacing: 2px;
+  line-height: 2; /* Satır aralığı daha ferah */
+  letter-spacing: 0.5px;
   font-weight: 300;
-  list-style-position: inside;
-  list-style-type: disc;
+  list-style-type: none; /* Varsayılan noktayı kaldır */
+  padding: 0;
+  width: 100%;
+  text-align: center; /* Veya left yapabilirsin */
 }
 
-/* .skills-wrapper article > ul li::marker {
-  color: green;
-} */
+/* Özel Liste İşareti */
+.skills-wrapper article > ul li {
+  position: relative;
+  padding-left: 20px;
+  display: inline-block; /* Yan yana veya blok durması için ayarlanabilir */
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Çok hafif ayraç */
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
 
+.skills-wrapper article > ul li::before {
+  content: "▹"; /* Daha şık bir ok */
+  color: #4ade80;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  top: -2px;
+}
 
-
-/* Responsive */
+/* --- RESPONSIVE --- */
 @media (max-width: 600px) {
+  .skills-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  /* Honeycomb Mobilde */
+  .honeycomb {
+    padding: 20px 10px;
+    gap: 15px;
+    background-color: rgba(20, 20, 20, 0.2); /* Mobilde biraz daha şeffaf */
+  }
+
   .hex-svg-wrapper {
-    width: 80px;
-    height: 90px;
+    width: 90px;
+    height: 105px;
   }
 
   .hex-content .icon {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .hex-content .name {
+    font-size: 11px;
   }
 
-  .hex-content p {
-    font-size: 12px;
-  }
-  .skills-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
+  /* Soft Skills Mobilde */
   .skills-wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    padding: 20px 15px;
+    gap: 15px;
   }
 
   .skills-wrapper article {
-    width: 90%;
-    max-width: 200px;
-  }
-
-  .skills-wrapper h3 {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .skills-wrapper li {
-    font-size: 0.85rem;
+    padding: 15px;
     text-align: left;
-    list-style-position: outside;
-    padding-left: 1em; 
+  }
+
+  .skills-wrapper article h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-wrapper article > ul li {
+    font-size: 0.9rem;
   }
 }

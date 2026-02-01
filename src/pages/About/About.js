@@ -29,7 +29,6 @@ function About() {
             skills in this area too.
           </p>
         </article>
-        <div className="divider" />
         <article>
           <h2>Education</h2>
           <ul>
@@ -43,7 +42,6 @@ function About() {
             </li>
           </ul>
         </article>
-        <div className="divider" />
         <article>
           <h2>Career Goals</h2>
           <p>
@@ -52,7 +50,6 @@ function About() {
             open source projects and continue growing as a developer.
           </p>
         </article>
-        <div className="divider" />
         <article>
           <h2>Outside of Coding</h2>
           <p>

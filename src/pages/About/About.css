@@ -5,86 +5,120 @@
   justify-content: center;
   min-height: 90vh;
   width: 100%;
-  height: auto;
   color: white;
-  overflow-x: hidden; /* ✅ Yatay scroll'u engeller */
+  overflow-x: hidden;
   padding: 20px;
-  box-sizing: border-box; /* ✅ Padding dışına taşmayı engeller */
-}
-
-.fade-in {
-  animation: fade 0.5s ease-out forwards;
-  opacity: 0;
-  position: relative;
-  top: 50px;
-}
-
-@keyframes fade {
-  to {
-    opacity: 1;
-    top: 0;
-  }
+  box-sizing: border-box;
 }
 
 .about main {
-  /* box-shadow: 0px 0px 5px 2px green; */
+  /* Divider div'leri yerine gap kullanıyoruz */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  
   border-radius: 16px;
   width: 800px;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 20px 0;
-  padding: 20px 30px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px 40px; /* Biraz daha ferah padding */
+  
+  /* Daha modern, buzlu cam (Glassmorphism) zemini */
+  backdrop-filter: blur(10px);
+  background-color: rgba(20, 20, 20, 0.4);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
 }
 
 section h2,
 article h2 {
   letter-spacing: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #4ade80; /* Başlıkları hafif yeşil yaparak bütünlük sağla */
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
 }
 
+/* --- PROFESYONEL ARTICLE TASARIMI --- */
 article {
   display: flex;
   flex-direction: column;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px; /* 1.5px çok fazlaydı, okumayı zorlaştırır */
   font-weight: 300;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  padding: 5px 15px;
+  line-height: 1.7; /* Satır aralığını biraz açtık */
+  padding: 20px 25px;
   border-radius: 12px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.358);
+  
+  /* Varsayılan hal: Çok silik bir sınır ve şeffaf zemin */
+  background: rgba(255, 255, 255, 0.02); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  /* Performanslı animasyon için will-change */
+  will-change: transform, border-color, box-shadow;
+  
+  /* Cubic-bezier ile daha "tok" bir animasyon hissi */
+  transition: 
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-article:hover{
-  transform: scale(1.01);
-  border: 1px solid limegreen;
+article ul {
+  padding-left: 20px; /* Listeleri biraz içeri al */
+  margin: 0;
 }
-/* .divider {
-  width: 100%;
-  height: 20px;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50"><path fill="none" stroke="%23008000" stroke-linecap="square" stroke-width="3.3" d="M15 50-35 0M35 50-15 0M55 50 5 0M75 50 25 0M95 50 45 0M115 50 65 0M135 50 85 0M155 50 105 0M175 50 125 0M195 50 145 0M215 50 165 0M235 50 185 0"></path></svg>')
-    center;
-  background-size: contain;
-  margin-bottom: 10px;
-} */
 
-/* ✅ SADECE MOBİLDE KÜÇÜLME */
+article li {
+  margin-bottom: 5px;
+}
+
+/* --- HOVER EFEKTLERİ --- */
+article:hover {
+  /* Scale yerine hafif yukarı kaldırma daha modern durur */
+  transform: translateY(-5px); 
+  
+  /* Arka planı çok hafif yeşile çalarak o "çamurlu" renk geçişini engelleriz */
+  background-color: rgba(50, 205, 50, 0.05); 
+  
+  /* Border rengi */
+  border-color: #4ade80; 
+  
+  /* İKİ KATMANLI GÖLGE:
+     1. Katman: Yeşil parıltı (Glow)
+     2. Katman: Siyah gölge (Depth/Derinlik) */
+  box-shadow: 
+    0 0 15px rgba(74, 222, 128, 0.2), 
+    0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fade-in {
+  animation: fade 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; /* Daha yumuşak giriş */
+  opacity: 0;
+  position: relative;
+  top: 30px;
+}
+
+@keyframes fade {
+  to { opacity: 1; top: 0; }
+}
+
+
 @media (max-width: 480px) {
   .about main {
-    padding: 10px 15px;
-    border-radius: 12px;
+    padding: 20px;
+    width: 95%;
   }
 
-  section h2,
-  article h2 {
-    font-size: 1rem;
-    text-align: center;
+  section h2, article h2 {
+    font-size: 1.2rem;
+    text-align: left;
   }
 
   article {
-    font-size: 0.9rem;
-    text-align: justify;
+    padding: 15px;
+    font-size: 0.95rem;
+    text-align: left;
   }
 }
