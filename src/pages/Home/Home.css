@@ -187,29 +187,19 @@ body, html {
     padding: 0;
   }
 
-  /* --- MOBİL RESİM (ASLA ZOOMLAMAZ - SABİT) --- */
   .profile-card img {
     width: 100%;
-    height: 280px; /* Kapalı kart yüksekliği ile aynı */
-    margin-bottom: 0; /* Boşluk yok */
-    /* Resim boyutu transition ile değişmeyecek! */
+    height: 280px;
+    margin-bottom: 0;
     transition: filter 0.3s ease; 
   }
-
-  /* --- MOBİL İÇERİK (PARŞOMEN EFEKTİ) --- */
   .card-content {
     width: 100%;
     overflow: hidden;
-    
-    /* KAPALI DURUM */
-    max-height: 0; /* Yer kaplamasın */
+    max-height: 0;
     opacity: 0;
-    /* Yazı resmin arkasında yukarıda bekliyor */
     transform: translateY(-50px); 
-    
-    padding: 0 15px; /* Kenar boşlukları */
-    
-    /* Kapanış Animasyonu: Önce yukarı kaçsın, sonra height kapansın */
+    padding: 0 15px;
     transition: 
       opacity 0.3s ease, 
       transform 0.4s ease, 
@@ -228,7 +218,7 @@ body, html {
   /* Açıkken resim aynı kalıyor (Zoom YOK) */
   .profile-card.expanded img {
     width: 100%;
-    height: 280px; /* SABİT */
+    height: 280px;
     filter: brightness(100%);
   }
 
@@ -256,8 +246,8 @@ body, html {
   }
   
   /* Kapalı yükseklik */
-  .profile-card { height: 260px; }
-  .profile-card img { height: 260px; }
+  .profile-card { height: 280px; }
+  .profile-card img { height: 280px; }
   
   /* Açık yükseklik */
   .profile-card.expanded { height: 480px; }
