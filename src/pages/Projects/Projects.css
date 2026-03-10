@@ -1,25 +1,152 @@
-.projects{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    min-height: calc(90vh - 1px);
-    width: 100%;
-    color: white;
+.projects {
+  padding: 2rem;
+  min-height: 100vh;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background-color: red; */
 }
 
-.fade-in {
-  animation: fade 0.5s ease-out forwards;
-  opacity: 0;
-  position: relative;
-  top: 50px;
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-@keyframes fade{
-  to {
-    opacity: 1;
-    top: 0;
+.projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.projects-subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #00d8ff; /* React mavisi veya tema renginiz */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  backdrop-filter: blur(10px);
+  width: 600px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: limegreen;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-top h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.language-tag {
+  font-size: 0.75rem;
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff8c;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.description {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.stats span {
+  margin-right: 15px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.repo-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.repo-link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* Responsive Design - Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .projects {
+    max-width: 90%;
+    padding: 1.5rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .project-card {
+    width: 90%;
+    padding: 1rem;
+  }
+  .projects-header h1 {
+    font-size: 2rem;
   }
 }

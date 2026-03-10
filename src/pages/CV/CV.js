@@ -18,7 +18,7 @@ function CV() {
   return (
     <div className="cv fade-in">
       <h2 className="cv-title">
-        <ScrambleText text={"📄 My CV"} duration={1000} />
+        <ScrambleText text={"My CV"} duration={1000} />
       </h2>
       <p>You can download my CV using the button below:</p>
       <a href="/moustafa-moustafa-cv.pdf" download className="cv-download">

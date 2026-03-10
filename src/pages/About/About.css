@@ -108,7 +108,7 @@ article:hover {
 @media (max-width: 480px) {
   .about main {
     padding: 20px;
-    width: 95%;
+    width: 100%;
   }
 
   section h2, article h2 {

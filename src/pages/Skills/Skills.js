@@ -75,8 +75,9 @@ function Skills() {
   return (
     <div className="skills fade-in">
       <h2 className="skills-title">
-        <ScrambleText text={"🛠 My Skills"} duration={1000} />
+        <ScrambleText text={"My Skills"} duration={1000} />
       </h2>
+      {/* 🛠 */}
       <section className="skills-wrapper">
         <article>
           <h3>Soft Skills</h3>

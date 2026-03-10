@@ -1,8 +1,14 @@
 import "./Contact.css";
-import { FaLinkedin, FaInstagram, FaGithub, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaGithub,
+  FaFacebook,
+  FaBriefcase,
+} from "react-icons/fa";
 import { MdEmail, MdContentCopy } from "react-icons/md"; // Copy ikonu ekledim
 import { useEffect, useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import ScrambleText from "../../components/ScrambleText";
 
 function Contact() {
@@ -23,10 +29,15 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_z45de8k', 'template_zfrbyi7', e.target, 'A1mZ4PiuJDeEHO3eO')
+      .sendForm(
+        "service_z45de8k",
+        "template_zfrbyi7",
+        e.target,
+        "A1mZ4PiuJDeEHO3eO",
+      )
       .then(
         () => alert("Mesaj gönderildi 🎉"),
-        (error) => alert("Bir hata oluştu 😢")
+        (error) => alert("Bir hata oluştu 😢"),
       );
 
     e.target.reset();
@@ -62,21 +73,25 @@ function Contact() {
           <input type="email" name="email" placeholder="Email" required />
           <textarea
             name="message"
-            rows="5"
+            rows="8"
             placeholder="Your Message..."
             required
           />
           <button type="submit">Send Message</button>
         </form>
 
-        {/* SAĞ TARAF: SOSYAL LİNKLER */}
         <div className="contact-socials">
-          
           <div className="email-copy-wrapper">
-            <button onClick={handleCopyEmail} className="copy-btn" title="Copy Email">
+            <button
+              onClick={handleCopyEmail}
+              className="copy-btn"
+              title="Copy Email"
+            >
               <MdEmail />
               <span>mustafamustafatw@gmail.com</span>
-              <MdContentCopy style={{ marginLeft: "auto", fontSize: "0.9em", opacity: 0.7 }} />
+              <MdContentCopy
+                style={{ marginLeft: "auto", fontSize: "0.9em", opacity: 0.7 }}
+              />
             </button>
             {copied && <span className="copied-msg">Copied!</span>}
           </div>
@@ -89,7 +104,14 @@ function Contact() {
             <FaLinkedin />
             <span>LinkedIn</span>
           </a>
-          
+          <a
+            href="https://bionluk.com/moustafamoustafa"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaBriefcase />
+            <span>Bionluk</span>
+          </a>
           <a
             href="https://github.com/FTMustafa"
             target="_blank"

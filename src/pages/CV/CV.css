@@ -27,10 +27,13 @@
 }
 
 .cv-title {
+  /* text-shadow: 2px 2px green; */
   font-size: 2rem;
-  text-shadow: 2px 2px green;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  /* border: 1px solid limegreen;
+  padding: 10px 60px;
+  border-radius: 30px 90px 30px 90px; */
 }
 
 .cv p {
