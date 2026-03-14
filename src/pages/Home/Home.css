@@ -116,11 +116,10 @@ body, html {
   }
 
   .card-content {
-    width: 0;
     opacity: 0;
     transform: translateX(30px);
     margin-left: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.4s ease, margin-left 0.4s ease;
   }
 
   .profile-card:hover {
@@ -147,11 +146,10 @@ body, html {
   }
 
   .profile-card:hover .card-content {
-    width: auto;
     opacity: 1;
     transform: translateX(0);
     margin-left: 25px;
-    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
+    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s, margin-left 0.4s ease 0.15s;
   }
 }
 

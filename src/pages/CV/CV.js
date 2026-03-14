@@ -16,11 +16,11 @@ function CV() {
   }, []);
 
   return (
-    <div className="cv fade-in">
-      <h2 className="cv-title">
+    <div className="cv fade-in" style={{ justifyContent: 'flex-start', paddingTop: '3rem', paddingBottom: '50px' }}>
+      <h2 className="cv-title" style={{ marginTop: 0}}>
         <ScrambleText text={"My CV"} duration={1000} />
       </h2>
-      <p>You can download my CV using the button below:</p>
+      <p className="cv-subtitle" style={{ marginTop: 0 }}>You can download my CV using the button below:</p>
       <a href="/moustafa-moustafa-cv.pdf" download className="cv-download">
         Download CV (PDF)
       </a>

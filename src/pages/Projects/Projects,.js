@@ -39,12 +39,12 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects fade-in">
-      <header className="projects-header">
-        <h1>
+    <div className="projects fade-in" style={{ justifyContent: 'flex-start', paddingTop: '3rem', paddingBottom: '50px' }}>
+      <header className="projects-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h1 style={{ marginTop: 0, marginBottom: '15px' }}>
           <ScrambleText text="My Projects" duration={1000} />
         </h1>
-        <p className="projects-subtitle">
+        <p className="projects-subtitle" style={{ marginTop: 0 }}>
           Here are some of my open source projects from GitHub.
         </p>
       </header>

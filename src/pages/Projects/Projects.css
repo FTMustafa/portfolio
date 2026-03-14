@@ -19,8 +19,10 @@
 }
 
 .projects-subtitle {
-  color: #aaa;
-  font-size: 1.1rem;
+ color: #e0e0e0;
+ letter-spacing: 1px;
+  font-weight: 300;
+  /* font-size: 1.1rem; */
 }
 
 /* Loading Spinner */
