@@ -18,7 +18,8 @@ import {
   SiFlutter,
   SiDart,
   SiPython,
-  SiArduino
+  SiArduino,
+  SiNextdotjs
 } from "react-icons/si";
 
 import ScrambleText from "../../components/ScrambleText";
@@ -41,7 +42,8 @@ function Skills() {
     { icon: <FaJs />, name: "JavaScript" },
     { icon: <FaReact />, name: "React" },
     { icon: <SiTailwindcss />, name: "Tailwind" },
-    { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
+    // { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <SiFlutter />, name: "Flutter" },
     { icon: <SiDart />, name: "Dart" },
     { icon: <FaGitAlt />, name: "Git" },
