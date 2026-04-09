@@ -25,7 +25,7 @@ function About() {
             building responsive and user-friendly web and mobile applications. I
             enjoy designing clean UIs, solving coding challenges, learning new
             frameworks, and building full-stack applications from scratch. I'm
-            currently focusing on machine learning using Python to improve my
+            currently focusing on deep learning using Python to improve my
             skills in this area too.
           </p>
         </article>
