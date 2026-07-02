@@ -13,11 +13,11 @@ function Projects() {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&direction=desc`
+          `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&direction=desc`,
         );
         const data = await response.json();
         // Forklanmamış ve açıklaması olan projeleri filtreleme:
-        // const filteredData = data.filter(repo => !repo.fork); 
+        // const filteredData = data.filter(repo => !repo.fork);
         setRepos(data);
         setLoading(false);
       } catch (error) {
@@ -39,9 +39,23 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects fade-in" style={{ justifyContent: 'flex-start', paddingTop: '3rem', paddingBottom: '50px' }}>
-      <header className="projects-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <h1 style={{ marginTop: 0, marginBottom: '15px' }}>
+    <div
+      className="projects fade-in"
+      style={{
+        justifyContent: "flex-start",
+        paddingTop: "3rem",
+        paddingBottom: "50px",
+      }}
+    >
+      <header
+        className="projects-header"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1 style={{ marginTop: 0, marginBottom: "15px" }}>
           <ScrambleText text="My Projects" duration={1000} />
         </h1>
         <p className="projects-subtitle" style={{ marginTop: 0 }}>
@@ -56,26 +70,67 @@ function Projects() {
         </div>
       ) : (
         <div className="projects-grid">
-          {Array.isArray(repos) && repos.map((repo) => (
-            <div className="project-card" key={repo.id}>
-              <div className="card-top">
-                <h3>{repo.name}</h3>
-                <span className="language-tag">{repo.language || "Code"}</span>
-              </div>
-              <p className="description">
-                {repo.description || "No description provided."}
-              </p>
-              <div className="card-footer">
-                <div className="stats">
-                  <span>★ {repo.stargazers_count}</span>
-                  <span>⑂ {repo.forks_count}</span>
-                </div>
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="repo-link">
-                  View Repo &rarr;
-                </a>
-              </div>
+          <div className="project-card">
+            <div className="card-top">
+              <h3>Seminer Sunumu</h3>
+              {/* Temana uysun diye etiket rengini mavi/yeşil tonlarında tutabiliriz */}
+              <span
+                className="language-tag"
+                style={{
+                  background: "rgba(0, 216, 255, 0.15)",
+                  color: "#00d8ff",
+                }}
+              >
+                PDF
+              </span>
             </div>
-          ))}
+            <p className="description">
+              Bilgisayar Mühendisliği yüksek lisans döneminde hazırladığım
+              seminer çalışmamın detaylı akademik raporu.
+            </p>
+            <div className="card-footer">
+              <div className="stats">
+                <span>📄 Seminer Raporu</span>
+              </div>
+              <a
+                href="/seminer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="repo-link"
+              >
+                View PDF &rarr;
+              </a>
+            </div>
+          </div>
+
+          {Array.isArray(repos) &&
+            repos.map((repo) => (
+              <div className="project-card" key={repo.id}>
+                <div className="card-top">
+                  <h3>{repo.name}</h3>
+                  <span className="language-tag">
+                    {repo.language || "Code"}
+                  </span>
+                </div>
+                <p className="description">
+                  {repo.description || "No description provided."}
+                </p>
+                <div className="card-footer">
+                  <div className="stats">
+                    <span>★ {repo.stargazers_count}</span>
+                    <span>⑂ {repo.forks_count}</span>
+                  </div>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="repo-link"
+                  >
+                    View Repo &rarr;
+                  </a>
+                </div>
+              </div>
+            ))}
         </div>
       )}
     </div>

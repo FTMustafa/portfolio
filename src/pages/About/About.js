@@ -37,7 +37,7 @@ function About() {
               University (2021-2025)
             </li>
             <li>
-              Master's degree of Computer Engineering (GPA 88.71\100) - Trakya
+              Master's degree of Computer Engineering (GPA 90.73\100) - Trakya
               University (2025-2027)
             </li>
           </ul>
