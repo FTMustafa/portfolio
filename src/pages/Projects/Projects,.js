@@ -72,8 +72,7 @@ function Projects() {
         <div className="projects-grid">
           <div className="project-card">
             <div className="card-top">
-              <h3>Seminer Sunumu</h3>
-              {/* Temana uysun diye etiket rengini mavi/yeşil tonlarında tutabiliriz */}
+              <h3>Seminer Raporu</h3>
               <span
                 className="language-tag"
                 style={{

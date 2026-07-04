@@ -45,34 +45,48 @@
   line-height: 1.6;
 }
 
+/* --- DEĞİŞEN KISIM: BUTON --- */
 .cv-download {
   margin-top: 0.8rem;
-  background-color: transparent;
+  background-color: rgba(50, 205, 50, 0.1);
   padding: 12px 24px;
   border-radius: 8px;
-  color: white;
+  color: limegreen;
   text-decoration: none;
   font-weight: bold;
-  transition: box-shadow 0.5s ease;
-  border: 3px solid limegreen;
-  border-style: dotted;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(50, 205, 50, 0.4);
   cursor: url("../../components/Images/pointer.png"), auto;
 }
 
 .cv-download:hover {
-  box-shadow: 196px 0px limegreen inset;
+  background-color: limegreen;
+  color: #000;
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.4);
 }
 
 .cv-download:active {
   transform: scale(0.98);
 }
 
-.cv-preview {
+/* --- DEĞİŞEN KISIM: GLASSMORPHISM ÇERÇEVE --- */
+.cv-preview-container {
   width: 90%;
   max-width: 800px;
+  margin-top: 40px;
+  padding: 15px; /* Cam çerçevenin kalınlığı */
+  background: rgba(255, 255, 255, 0.05); /* Yarı saydam beyaz */
+  backdrop-filter: blur(10px); /* Cam bulanıklığı */
+  -webkit-backdrop-filter: blur(10px); /* Safari desteği için */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* İnce şeffaf sınır çizgisi */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Derinlik katan hafif dış gölge */
+}
+
+.cv-preview {
+  width: 100%;
   height: 600px;
   border: none;
-  margin-top: 40px;
-  box-shadow: 0px 0px 6px 2px green;
-  border-radius: 12px;
+  border-radius: 8px; /* İçerideki PDF'in köşeleri çerçevenin dışına taşmasın diye */
+  display: block;
 }

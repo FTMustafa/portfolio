@@ -24,7 +24,12 @@ function CV() {
       <a href="/moustafa-moustafa-cv.pdf" download className="cv-download">
         Download CV (PDF)
       </a>
-      <iframe src="/moustafa-moustafa-cv.pdf" className="cv-preview" title="CV Preview" />
+      
+      {/* SADECE BURASI DEĞİŞTİ: Iframe'i cam çerçeve div'i içine aldık */}
+      <div className="cv-preview-container">
+        <iframe src="/moustafa-moustafa-cv.pdf" className="cv-preview" title="CV Preview" />
+      </div>
+
     </div>
   );
 }
