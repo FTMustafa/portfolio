@@ -25,7 +25,6 @@ function CV() {
         Download CV (PDF)
       </a>
       
-      {/* SADECE BURASI DEĞİŞTİ: Iframe'i cam çerçeve div'i içine aldık */}
       <div className="cv-preview-container">
         <iframe src="/moustafa-moustafa-cv.pdf" className="cv-preview" title="CV Preview" />
       </div>

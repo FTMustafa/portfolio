@@ -81,12 +81,19 @@
   border: 1px solid rgba(255, 255, 255, 0.1); /* İnce şeffaf sınır çizgisi */
   border-radius: 16px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Derinlik katan hafif dış gölge */
+  box-sizing: border-box;
 }
 
 .cv-preview {
   width: 100%;
   height: 600px;
   border: none;
-  border-radius: 8px; /* İçerideki PDF'in köşeleri çerçevenin dışına taşmasın diye */
+  border-radius: 8px; 
   display: block;
+}
+
+@media (max-width: 768px) {
+  .cv p{
+    max-width: 90%;
+  }
 }

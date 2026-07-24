@@ -212,6 +212,7 @@
     flex-direction: column; /* Mobilde alt alta */
     padding: 30px;
     gap: 40px;
+    max-width: 85%;
   }
 
   .contact-socials {
