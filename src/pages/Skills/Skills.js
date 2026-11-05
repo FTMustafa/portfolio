@@ -7,19 +7,13 @@ import {
   FaCss3Alt,
   FaJs,
   FaGitAlt,
-  FaNpm,
-  FaDocker
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiExpress,
-  SiMysql,
-  SiElectron,
   SiFlutter,
   SiDart,
   SiPython,
-  SiArduino,
-  SiNextdotjs
+  SiNextdotjs,
 } from "react-icons/si";
 
 import ScrambleText from "../../components/ScrambleText";
@@ -43,32 +37,26 @@ function Skills() {
     { icon: <FaReact />, name: "React" },
     { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <SiNextdotjs />, name: "Next.js" },
-    // { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <SiFlutter />, name: "Flutter" },
     { icon: <SiDart />, name: "Dart" },
     { icon: <FaGitAlt />, name: "Git" },
-    { icon: <SiPython />, name: "Python" },
-    { icon: <SiArduino />, name: "Arduino" },
-    // { icon: <FaDocker />, name: "Docker" },
-    // { icon: <SiElectron />, name: "Electron" },
-    // { icon: <SiExpress />, name: "Express.js" },
-    // { icon: <SiMysql />, name: "MySQL" },
-    // { icon: <FaNpm />, name: "NPM" },
+    { icon: <SiPython />, name: "Python" },    
   ];
 
   const softSkills = [
-    "Problem Solving",
-    "Teamwork",
-    "Time Management",
+    "Analytical Thinking",
+    "Algorithmic Problem-Solving",
+    "Academic Research",
     "Communication",
-    "Creativity",
+    "Flexibility",
     "Adaptability",
   ];
 
   const tools = [
     "VS Code",
-    "Docker",
-    "Postman",
+    "OpenCV",
+    "TensorFlow",
     "Chrome DevTools",
     "GitHub",
     "Terminal",
@@ -119,7 +107,6 @@ function Skills() {
           </div>
         ))}
       </div>
-      
     </div>
   );
 }
